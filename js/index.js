@@ -42,13 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navMenu = document.querySelectorAll('a');
-navMenu[0].textContent = 'Services';
-navMenu[1].textContent = 'Product';
-navMenu[2].textContent = 'Vision';
-navMenu[3].textContent = 'Features';
-navMenu[4].textContent = 'About';
-navMenu[5].textContent = 'Contact';
-
+navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
+navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
+navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
+navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
+navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
+navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+//navMenu[0].textContent =  siteContent["nav"]["nav-item-1"]; ???
 
 const companyImg = document.getElementById('cta-img');
 companyImg.setAttribute('src', siteContent["cta"]["img-src"])
@@ -70,17 +70,16 @@ mainBttn.textContent = 'Get Started';
 console.log(mainBttn);
 
 const headers = document.querySelectorAll('h4');
-headers[0].textContent = 'Features';
-headers[1].textContent = 'About';
-headers[2].textContent = 'Services';
-headers[3].textContent = 'Product';
-headers[4].textContent = 'Vision';
-headers[5].textContent = 'Contact';
+headers[0].textContent = siteContent["main-content"]["features-h4"];
+headers[1].textContent = siteContent["main-content"]["about-h4"];
+headers[2].textContent = siteContent["main-content"]["services-h4"];
+headers[3].textContent = siteContent["main-content"]["product-h4"];
+headers[4].textContent = siteContent["main-content"]["vision-h4"];
 console.log(headers);
 
 const topPara = document.querySelectorAll('.main-content .top-content .text-content p');
-topPara[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-topPara[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topPara[0].textContent = siteContent["main-content"]["features-content"];
+topPara[1].textContent = siteContent["main-content"]["about-content"];
 console.log(topPara);
 
 //trying a different way to add a image
@@ -90,15 +89,14 @@ snippet.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 const bottomPara = document.querySelectorAll('.main-content .bottom-content .text-content p');
-bottomPara[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-bottomPara[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-bottomPara[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomPara[0].textContent = siteContent["main-content"]["services-content"];
+bottomPara[1].textContent = siteContent["main-content"]["product-content"];
+bottomPara[2].textContent = siteContent["main-content"]["vision-content"];
 console.log(bottomPara);
 
 
 const breakLine = document.querySelector('.contact p');
 breakLine.textContent = '123 Way 456 Street Somewhere, USA'
-breakLine.innerHTML = siteContent["contact"]["address"].split(' ').join('<br/>');
 
 
 const foot = document.querySelectorAll('.contact p');
