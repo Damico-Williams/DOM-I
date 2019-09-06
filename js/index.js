@@ -50,10 +50,12 @@ navMenu[4].textContent = 'About';
 navMenu[5].textContent = 'Contact';
 
 
+const companyImg = document.getElementById('cta-img');
+companyImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-const companyLogo = document.querySelector('section img');
-companyLogo.setAttribute('src', 'img/header-img.png')
-console.log(companyLogo);
+// const companyImg = document.querySelector('section img');
+// companyImg.setAttribute('src', 'img/header-img.png')
+// above code also works
 
 
 //use inner HTML
@@ -94,9 +96,9 @@ bottomPara[2].textContent = 'Vision content elementum magna eros, ac posuere elv
 console.log(bottomPara);
 
 
-const troubleMaker = document.querySelector('.contact p');
-troubleMaker.textContent = '123 Way 456 Street Somewhere, USA'
-troubleMaker.innerHTML = siteContent["contact"]["address"].split(' ').join('<br/>');
+const breakLine = document.querySelector('.contact p');
+breakLine.textContent = '123 Way 456 Street Somewhere, USA'
+breakLine.innerHTML = siteContent["contact"]["address"].split(' ').join('<br/>');
 
 
 const foot = document.querySelectorAll('.contact p');
