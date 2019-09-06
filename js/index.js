@@ -106,11 +106,19 @@ foot[2].textContent = 'sales@greatidea.io';
 const copy = document.querySelector('footer p');
 copy.textContent = 'Copyright Great Idea! 2018'
 
-
+//task 3
 navMenu.forEach((ele) => {
-  navMenu.style.color = 'green';
+  ele.style.color = 'green';
 })
 
+const lastNav = document.createElement('a');
+lastNav.textContent = 'Investors';
 
+const newTag = document.querySelector('nav');
+newTag.appendChild(lastNav);
 
+const firstNav = document.createElement('a');
+firstNav.textContent = 'Careers';
 
+const anoTag = document.querySelector('nav');
+anoTag.prepend(firstNav);
