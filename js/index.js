@@ -48,7 +48,7 @@ navMenu[2].textContent = 'Vision';
 navMenu[3].textContent = 'Features';
 navMenu[4].textContent = 'About';
 navMenu[5].textContent = 'Contact';
-console.log(navMenu)
+
 
 
 const companyLogo = document.querySelector('section img');
@@ -56,10 +56,61 @@ companyLogo.setAttribute('src', 'img/header-img.png')
 console.log(companyLogo);
 
 
+//use inner HTML
 const mainHead = document.querySelector('h1');
 mainHead.textContent = 'DOM Is Awsome';
 mainHead.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br/> ');
-// const mybr = document.createElement('br')
-// mainHead.appendChild('mybr');
 console.log(mainHead);
-//use inner HTML
+
+
+const mainBttn = document.querySelector('button');
+mainBttn.textContent = 'Get Started';
+console.log(mainBttn);
+
+const headers = document.querySelectorAll('h4');
+headers[0].textContent = 'Features';
+headers[1].textContent = 'About';
+headers[2].textContent = 'Services';
+headers[3].textContent = 'Product';
+headers[4].textContent = 'Vision';
+headers[5].textContent = 'Contact';
+console.log(headers);
+
+const topPara = document.querySelectorAll('.main-content .top-content .text-content p');
+topPara[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topPara[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+console.log(topPara);
+
+//trying a different way to add a image
+const snippet = document.getElementById('middle-img');
+snippet.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+const bottomPara = document.querySelectorAll('.main-content .bottom-content .text-content p');
+bottomPara[0].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomPara[1].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomPara[2].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+console.log(bottomPara);
+
+
+const troubleMaker = document.querySelector('.contact p');
+troubleMaker.textContent = '123 Way 456 Street Somewhere, USA'
+troubleMaker.innerHTML = siteContent["contact"]["address"].split(' ').join('<br/>');
+
+
+const foot = document.querySelectorAll('.contact p');
+foot[1].textContent = '1 (888) 888-8888';
+foot[2].textContent = 'sales@greatidea.io';
+
+const copy = document.querySelector('footer p');
+copy.textContent = 'Copyright Great Idea! 2018'
+
+
+navMenu.forEach((ele) => {
+  navMenu.style.color = 'green';
+})
+
+
+
+
