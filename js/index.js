@@ -60,8 +60,8 @@ companyImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 //use inner HTML
 const mainHead = document.querySelector('h1');
-mainHead.textContent = 'DOM Is Awsome';
-mainHead.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br/> ');
+mainHead.textContent = 'DOM Is Awesome';
+mainHead.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br/>');
 console.log(mainHead);
 
 
@@ -96,7 +96,10 @@ console.log(bottomPara);
 
 
 const breakLine = document.querySelector('.contact p');
-breakLine.textContent = '123 Way 456 Street Somewhere, USA'
+breakLine.textContent = '123 Way 456 Street Somewhere, USA';
+const breakLit = siteContent.contact.address.split(' ');
+breakLine.innerHTML = `${breakLit[0]}  ${breakLit[1]}  ${breakLit[2]}  ${breakLit[3]} <br> ${breakLit[4]}  ${breakLit[5]}`;
+
 
 
 const foot = document.querySelectorAll('.contact p');
