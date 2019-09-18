@@ -40,3 +40,88 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navMenu = document.querySelectorAll('a');
+navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
+navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
+navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
+navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
+navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
+navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+//navMenu[0].textContent =  siteContent["nav"]["nav-item-1"]; ???
+
+const companyImg = document.getElementById('cta-img');
+companyImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// const companyImg = document.querySelector('section img');
+// companyImg.setAttribute('src', 'img/header-img.png')
+// above code also works
+
+
+//use inner HTML
+const mainHead = document.querySelector('h1');
+mainHead.textContent = 'DOM Is Awesome';
+mainHead.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br/>');
+console.log(mainHead);
+
+
+const mainBttn = document.querySelector('button');
+mainBttn.textContent = 'Get Started';
+console.log(mainBttn);
+
+const headers = document.querySelectorAll('h4');
+headers[0].textContent = siteContent["main-content"]["features-h4"];
+headers[1].textContent = siteContent["main-content"]["about-h4"];
+headers[2].textContent = siteContent["main-content"]["services-h4"];
+headers[3].textContent = siteContent["main-content"]["product-h4"];
+headers[4].textContent = siteContent["main-content"]["vision-h4"];
+console.log(headers);
+
+const topPara = document.querySelectorAll('.main-content .top-content .text-content p');
+topPara[0].textContent = siteContent["main-content"]["features-content"];
+topPara[1].textContent = siteContent["main-content"]["about-content"];
+console.log(topPara);
+
+//trying a different way to add a image
+const snippet = document.getElementById('middle-img');
+snippet.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+const bottomPara = document.querySelectorAll('.main-content .bottom-content .text-content p');
+bottomPara[0].textContent = siteContent["main-content"]["services-content"];
+bottomPara[1].textContent = siteContent["main-content"]["product-content"];
+bottomPara[2].textContent = siteContent["main-content"]["vision-content"];
+console.log(bottomPara);
+
+
+const breakLine = document.querySelector('.contact p');
+breakLine.textContent = '123 Way 456 Street Somewhere, USA';
+const breakLit = siteContent.contact.address.split(' ');
+breakLine.innerHTML = `${breakLit[0]}  ${breakLit[1]}  ${breakLit[2]}  ${breakLit[3]} <br> ${breakLit[4]}  ${breakLit[5]}`;
+
+
+
+const foot = document.querySelectorAll('.contact p');
+foot[1].textContent = '1 (888) 888-8888';
+foot[2].textContent = 'sales@greatidea.io';
+
+const copy = document.querySelector('footer p');
+copy.textContent = 'Copyright Great Idea! 2018'
+
+//task 3
+navMenu.forEach((ele) => {
+  ele.style.color = 'green';
+})
+
+const lastNav = document.createElement('a');
+lastNav.textContent = 'Investors';
+
+const newTag = document.querySelector('nav');
+newTag.appendChild(lastNav);
+
+const firstNav = document.createElement('a');
+firstNav.textContent = 'Careers';
+
+const anoTag = document.querySelector('nav');
+anoTag.prepend(firstNav);
