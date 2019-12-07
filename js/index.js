@@ -97,7 +97,7 @@ topPara[0].textContent = siteContent["main-content"]["features-content"];
 topPara[1].textContent = siteContent["main-content"]["about-content"];
 console.log(topPara);
 
-//trying a different way to add a image
+//trying a different way to add a imagee
 const snippet = document.getElementById('middle-img');
 snippet.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
