@@ -62,6 +62,7 @@ companyImg.setAttribute('src', siteContent["cta"]["img-src"])
 const mainHead = document.querySelector('h1');
 mainHead.textContent = 'DOM Is Awesome';
 mainHead.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br/>');
+mainHead.style.textShadow = '3px 3px #26DAF5';
 console.log(mainHead);
 
 
@@ -77,12 +78,26 @@ headers[3].textContent = siteContent["main-content"]["product-h4"];
 headers[4].textContent = siteContent["main-content"]["vision-h4"];
 console.log(headers);
 
+// Stretch
+headers[0].style.fontSize = '25px';
+headers[0].style.textShadow = '2px 2px #26DAF5';
+headers[1].style.fontSize = '25px';
+headers[1].style.textShadow = '2px 2px #26DAF5';
+headers[2].style.fontSize = '25px';
+headers[2].style.textShadow = '2px 2px #26DAF5';
+headers[3].style.fontSize = '25px';
+headers[3].style.textShadow = '2px 2px #26DAF5';
+headers[4].style.fontSize = '25px';
+headers[4].style.textShadow = '2px 2px #26DAF5';
+// Stretch
+
+
 const topPara = document.querySelectorAll('.main-content .top-content .text-content p');
 topPara[0].textContent = siteContent["main-content"]["features-content"];
 topPara[1].textContent = siteContent["main-content"]["about-content"];
 console.log(topPara);
 
-//trying a different way to add a image
+//trying a different way to add a imagee
 const snippet = document.getElementById('middle-img');
 snippet.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
